@@ -1,0 +1,16 @@
+{
+  "name": "orijinator-template-mk0001",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@tryghost/content-api": "^1.3.7",
+    "next": "9.2.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  }
+}
