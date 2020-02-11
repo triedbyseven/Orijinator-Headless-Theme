@@ -1,9 +1,10 @@
 import React from 'react';
+import 'uikit/dist/css/uikit.min.css'
 
-const Layout: React.SFC = ({ chidren }: any) => {
+const Layout: React.SFC = ({ children }: any) => {
     return (
-        <div>
-            {chidren}
+        <div className="uk-container">
+            {children}
         </div>
     )
 }
