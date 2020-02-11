@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import Hero from '../components/Hero';
 import { getPosts } from '../api/posts';
 import { NextPage } from 'next';
 
@@ -10,6 +11,7 @@ interface IndexProps {
 const Index: NextPage<IndexProps> = props => {
   return (
     <Layout>
+      <Hero />
       <ul>
         {props.posts.map(post => (
           <li key={post.id}>{post.title}</li>
