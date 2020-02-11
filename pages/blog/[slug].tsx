@@ -1,4 +1,7 @@
-const Slug = () => {
+import React from 'react';
+import { NextPage } from 'next';
+
+const Slug: NextPage = () => {
     return (
         <div>
             <h1>Slug Title</h1>
