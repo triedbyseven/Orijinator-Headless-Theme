@@ -1,10 +1,11 @@
 import React from 'react';
-import 'uikit/dist/css/uikit.min.css';
+import Footer from './Footer';
 
 const Layout: React.SFC = ({ children }: any) => {
   return (
-    <div className="uk-container" style={{ maxWidth: '100%', padding: 0 }}>
+    <div>
       {children}
+      <Footer />
     </div>
   );
 };
