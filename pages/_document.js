@@ -12,7 +12,7 @@ class MyDocument extends Document {
         <Head>
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1"
+            content="width=device-width, user-scalable=no"
           ></meta>
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap"
