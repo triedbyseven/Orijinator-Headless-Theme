@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface HeaderProps {}
+export interface HeaderProps { }
 
 const Header: React.SFC<HeaderProps> = () => {
   return (
@@ -45,6 +45,8 @@ const Header: React.SFC<HeaderProps> = () => {
             background-color: #000;
           }
           button {
+            border: none;
+            background-color: transparent;
             padding: 0;
           }
         `}
