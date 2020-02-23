@@ -22,6 +22,10 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/css/uikit.min.css"
           />
+          <title>
+            Orijinator | Empowering Entrepreneurship Through Technology | Los
+            Angeles
+          </title>
         </Head>
         <body>
           <Main />
