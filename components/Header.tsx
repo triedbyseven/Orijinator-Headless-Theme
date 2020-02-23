@@ -5,12 +5,23 @@ export interface HeaderProps { }
 const Header: React.SFC<HeaderProps> = () => {
   return (
     <div className="container">
-      <div className="hamburgerContainer" onClick={() => alert('Clicked!')}>
-        <button className="uk-flex uk-flex-column uk-flex-middle">
+      <div className="hamburgerContainer">
+        <button className="uk-flex uk-flex-column uk-flex-middle" uk-toggle="target: #offcanvas-push">
           <div className="topBar" />
           <div className="midBar" />
           <div className="bottomBar" />
         </button>
+      </div>
+      <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+        <div className="uk-offcanvas-bar">
+
+          <button className="uk-offcanvas-close" type="button" uk-close></button>
+
+          <h3>Title</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        </div>
       </div>
       <style jsx>
         {`
