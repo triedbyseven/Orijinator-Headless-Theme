@@ -1,25 +1,40 @@
 import React from 'react';
 
-export interface WhoWeAreProps {}
+export interface WhoWeAreProps { }
 
 const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
   return (
-    <div className="uk-flex-middle" uk-grid="true">
-      <div className="uk-width-1-1@s uk-width-1-2@m image-container">
-        <img
-          src="/whoweare__01.jpg"
-          alt="my image"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover'
-          }}
-        />
+    <div className="uk-flex uk-flex-middle container" uk-grid="true">
+      <div className="uk-flex uk-flex-right uk-width-1-1@s uk-width-1-2@m uk-padding-large">
+        <div className="image-container">
+          <img
+            uk-parallax="y: 100,0; easing: -2; media: @m;"
+            src="/whoweare__01.jpg"
+            alt="my image"
+            className="background-image"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover'
+            }}
+          />
+          <div uk-parallax="y: 150,0; easing: -2; media: @m;" className="uk-card uk-card-default uk-card-body card-detail uk-padding-small">
+            <img
+              src="collab_think.png"
+              title="branding_icon"
+              style={{ width: 30 }}
+            />
+            <h4>Collaborative</h4>
+            <p>
+              Small or big ideas we're here for the long run.
+              </p>
+          </div>
+        </div>
       </div>
-      <div className="uk-width-1-1@s uk-padding-large uk-width-1-2@m uk-padding-large ">
+      <div uk-parallax="y: 175,0; easing: -1; media: @m;" className="uk-width-1-1@s  uk-width-1-2@m uk-padding-large">
         <div className="main-content">
           <h3>Who We Are</h3>
           <h2>We Are Orijinators</h2>
@@ -42,6 +57,10 @@ const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
       </div>
       <style jsx>
         {`
+          .container {
+            margin-top: 0;
+            padding: 6rem  0;
+          }
           .uk-grid {
             margin-left: 0 !important;
             border-bottom: 1px solid #eee;
@@ -63,7 +82,26 @@ const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
           }
           .image-container {
             position: relative;
-            height: 700px;
+            width: 430px;
+            height: 475px;
+            border-radius: 22px;
+          }
+          .image-container h4 {
+            margin: 12px 0 0 0;
+          }
+          .image-container p {
+            margin-top: 10px
+          }
+          .image-container img.background-image {
+            border-radius: 22px;
+            box-shadow: 0 5px 15px rgba(0,0,0,.08);
+          }
+          .image-container .card-detail {
+            position: absolute;
+            max-width: 240px;
+            left: -30px;
+            bottom: -30px;
+            border-radius: 22px;
           }
           .main-content {
             max-width: 460px;
@@ -122,7 +160,7 @@ const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
           }
         `}
       </style>
-    </div>
+    </div >
   );
 };
 

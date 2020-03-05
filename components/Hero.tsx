@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export interface HeroProps {}
+export interface HeroProps { }
 
 const Hero: React.SFC<HeroProps> = () => {
   const [height, setHeight] = useState(0);
@@ -10,46 +10,57 @@ const Hero: React.SFC<HeroProps> = () => {
   });
 
   return (
-    <div className="uk-flex uk-flex-center uk-flex-middle container">
+    <div className="uk-flex uk-flex-left uk-flex-middle container" uk-grid="true">
       <img
-        src="hero_01.jpg"
+        uk-parallax="y: 0,150; easing: -2; media: @m"
+        src="hero_06.png"
         title="hero"
-        style={{
-          zIndex: -2,
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover'
-        }}
+        className="hero-image"
       />
-      <div className="content">
-        <div className="tagline">
-          Empowering entrepreneurship through technology.
+      <div className="inner-container">
+        <div className="uk-width-1@s uk-width-1-1@m uk-width-1-2@l uk-padding-small">
+          <div className="content">
+            <div className="company-title">
+              <h1>Orijinator</h1>
+            </div>
+            <div className="tagline uk-visible@m">
+              Empowering entrepreneurship through technology.
+            </div>
+            <p>From websites to progressive apps to consistent brand execution Orijinator
+is a new type of agency that aims to help you compete and drive your brand using the latest technology available in your market. Our focus is to prepare your digital venture
+ with technology otherwise only reachable by larger companies.</p>
+            <p>UI • UX • Progressive &amp; Mobile Applications • Websites</p>
+            <a className="uk-button uk-button-default btn-radius">LEARN MORE</a>
+          </div>
         </div>
-        <div className="company-title">
-          <h1>Orijinator</h1>
-        </div>
-        <p>UI • UX • Progressive &amp; Mobile Applications • Websites</p>
-        <a className="uk-button uk-button-default btn-radius">LEARN MORE</a>
       </div>
-      <div className="icon-scroll"></div>
+      <div className="icon-scroll uk-visible@m"></div>
       <style jsx>
         {`
           .container {
             position: relative;
             width: 100%;
             height: ${height}px;
-            border-bottom: 1px solid #eee;
+          }
+          .inner-container {
+            max-width: 1470px;
+            width: 100%;
+            margin: 0 auto;
+          }
+          .hero-image {
+            z-index: -2;
+            position: absolute;
+            bottom: -10%;
+            right: 0;
+            width: 825px;
           }
           .content {
             zindex: 2;
             position: relative;
-            max-width: 980px;
+            max-width: 535px;
             width: 100%;
             font-size: 18px;
-            text-align: center;
+            text-align: left;
             text-transform: uppercase;
           }
           .company-title {
@@ -59,34 +70,33 @@ const Hero: React.SFC<HeroProps> = () => {
             font-size: 60px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
-            text-align: center;
+            text-align: left;
             text-transform: uppercase;
-            margin-top: 1.5rem;
-            margin-bottom: 2rem;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            padding: 1rem 2rem;
-            border: 4px solid #000;
+            margin-left: -0.3rem;
+            margin-bottom: 0;
           }
           p {
-            font-size: 15px;
-            font-family: 'Montserrat', sans-serif;
-            text-transform: none;
-          }
-          .tagline {
             font-size: 16px;
             font-family: 'Montserrat', sans-serif;
+            line-height: 1.75;
+            text-transform: none;
+            color: #666;
+          }
+          .tagline {
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             color: #000;
           }
           .btn-radius {
             font-size: 18px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
-            color: #fff;
+            color: #000;
             padding: .25rem 2rem;
             border-radius: 3px;
-            background-color: #03c3da;
-            border: 1px solid #03c3da;
+            background-color: rgba(0, 0, 0, 0);
+            border: 2px solid #000;
           }
           .icon-scroll,
           .icon-scroll:before {
@@ -137,10 +147,67 @@ const Hero: React.SFC<HeroProps> = () => {
                       transform: translateY(46px);
             }
           }
+          @media only screen and (max-width: 1400px) { 
+            .hero-image {
+              width: 740px;
+            }
+          }
+           @media only screen and (max-width: 1275px) {
+            .hero-image {
+              bottom: 0%;
+              max-width: 640px;
+              width: 100%;
+            }
+          }
+          @media only screen and (max-width: 1200px) {
+            .hero-image {
+              bottom: 0;
+              right: 0;
+              max-width: 640px;
+              width: 100%;
+            }
+          }
+          @media only screen and (max-width: 1190px) {
+            .hero-image {
+              bottom: 5%;
+              right: 0;
+              max-width: 540px;
+              width: 100%;
+            }
+          }
+          @media only screen and (max-width: 1180px) {
+            .container {
+              overflow: hidden;
+              align-items: flex-end;
+              max-width: 100%;
+             align-items: center;
+              background: rgb(255,255,255);
+background: linear-gradient(230deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 69%, rgba(255,255,255,0) 100%);
+            }
+            .content {
+              margin: 0 auto;
+            }
+            .hero-image {
+              max-width: 800px;
+              top: -30%;
+              right: 0;
+              bottom: 0;
+              transform: rotate(58deg);
+            }
+          }
           @media only screen and (max-width: 960px) {
             h1 {
               display: inline-block;
-            font-size: 40px;
+          }
+          @media only screen and (max-width: 640px) {
+            .container {
+              overflow: hidden;
+              align-items: flex-end;
+              background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 50%, rgba(0,22,250,0) 100%);
+            }
+            h1 {
+              font-size: 40px;
+            }
           }
         `}
       </style>
