@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export interface HeroProps { }
+export interface HeroProps {}
 
 const Hero: React.SFC<HeroProps> = () => {
   const [height, setHeight] = useState(0);
@@ -10,7 +10,11 @@ const Hero: React.SFC<HeroProps> = () => {
   });
 
   return (
-    <div className="uk-flex uk-flex-left uk-flex-middle container" uk-grid="true">
+    <div
+      id="welcome"
+      className="uk-flex uk-flex-left uk-flex-middle container"
+      uk-grid="true"
+    >
       <img
         uk-parallax="y: 0,150; easing: -2; media: @m"
         src="hero_06.png"
@@ -23,14 +27,25 @@ const Hero: React.SFC<HeroProps> = () => {
             <div className="company-title">
               <h1>Orijinator</h1>
             </div>
-            <div className="tagline uk-visible@m">
-              Empowering entrepreneurship through technology.
+            <div className="tagline">
+              Empowering entrepreneurship through technology
             </div>
-            <p>From websites to progressive apps to consistent brand execution Orijinator
-is a new type of agency that aims to help you compete and drive your brand using the latest technology available in your market. Our focus is to prepare your digital venture
- with technology otherwise only reachable by larger companies.</p>
-            <p>UI • UX • Progressive &amp; Mobile Applications • Websites</p>
-            <a className="uk-button uk-button-default btn-radius">LEARN MORE</a>
+            <p>
+              From websites to progressive apps to consistent brand execution
+              Orijinator is a new type of agency that aims to help you compete
+              and drive your brand using the hottest technology at affordable
+              cost.
+            </p>
+            <p className="subtagline">
+              UI • UX • Progressive &amp; Mobile Applications • Websites
+            </p>
+            <a
+              data-uk-scroll
+              href="#target"
+              className="uk-button uk-button-default btn-radius"
+            >
+              LEARN MORE
+            </a>
           </div>
         </div>
       </div>
@@ -207,6 +222,16 @@ background: linear-gradient(230deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8
             }
             h1 {
               font-size: 40px;
+            }
+            .hero-image {
+                  top: -18%;
+                  right: -8%;
+            }
+            .tagline {
+              font-size: 10px;
+            }
+            .subtagline {
+              font-weight: 200;
             }
           }
         `}

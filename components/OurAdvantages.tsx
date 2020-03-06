@@ -4,12 +4,16 @@ export interface OurAdvantagesProps {}
 
 const OurAdvantages: React.SFC<OurAdvantagesProps> = () => {
   return (
-    <div className="uk-flex-middle container" uk-grid="true">
+    <div id="digital" className="uk-flex-middle container" uk-grid="true">
       <div className="uk-width-1-1@s uk-padding-large padding-fix">
         <div className="main-content">
-          <h3>What Makes Us</h3>
-          <h2>Creating Digital Experiences</h2>
-          <p>
+          <h3 data-uk-parallax="y: 150,0; easing: -2; media: @m;">
+            What Makes Us
+          </h3>
+          <h2 data-uk-parallax="y: 200,0; easing: -2; media: @m;">
+            Creating Digital Experiences
+          </h2>
+          <p data-uk-parallax="y: 250,0; easing: -2; media: @m;">
             The means to create a successful business has evolved. With channel
             after channel that continues to become a part of what will determine
             your success online, it can seem difficult if not impossible to know
@@ -18,10 +22,14 @@ const OurAdvantages: React.SFC<OurAdvantagesProps> = () => {
             We understand the journey ahead to building your business and we can
             help you every step through that process. Through our unique plans
             and consultation we aim to drive your business to success. Larger
-            established companies should not be the only ones who can utilize
-            technology, it’s 2020 and we are changing this now.{' '}
+            established companies should not only benefit from technology, it’s
+            2020 and we are changing this now.
           </p>
-          <img src="ouradvantages_01.jpg" title="digital success" />
+          <img
+            src="ouradvantages_01.jpg"
+            title="digital success"
+            data-uk-parallax="y: 300,0; easing: -2; media: @m;"
+          />
         </div>
       </div>
       <style jsx>
@@ -31,8 +39,9 @@ const OurAdvantages: React.SFC<OurAdvantagesProps> = () => {
           }
           .container {
             text-align: center;
-            background-color: #f4faff;
+            background-color: #fff;
             margin-top: 0;
+            padding: 6rem 0;
           }
           .main-content {
             font-size: 17px;
@@ -66,6 +75,11 @@ const OurAdvantages: React.SFC<OurAdvantagesProps> = () => {
             h2 {
               font-size: 40px;
             }
+          @media only screen and (max-width: 640px) {
+            .container {
+              padding 1rem 0;
+            }
+          }
         `}
       </style>
     </div>

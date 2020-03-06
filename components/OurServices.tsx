@@ -4,26 +4,51 @@ export interface OurServicesProps {}
 
 const OurServices: React.SFC<OurServicesProps> = () => {
   return (
-    <div className="uk-flex-middle" uk-grid="true">
-      <div className="uk-width-1-1@s uk-width-1-2@m image-container">
-        <img
-          src="/ourservices_01.jpg"
-          alt="my image"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover'
-          }}
-        />
+    <div className="uk-flex-middle container" uk-grid="true">
+      <div className="uk-flex uk-flex-right uk-width-1-1@s uk-width-1-2@m uk-padding-large">
+        <div className="image-container">
+          <img
+            data-uk-parallax="y: 100,0; easing: -2; media: @m;"
+            src="/ourservices_01.jpg"
+            alt="my image"
+            className="background-image"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover'
+            }}
+          />
+          <div
+            data-uk-parallax="y: 150,0; easing: -2; media: @m;"
+            className="uk-card uk-card-default uk-card-body card-detail uk-padding-small"
+          >
+            <img
+              src="collab_think.png"
+              title="branding_icon"
+              style={{ width: 30 }}
+            />
+            <h4>Systematic</h4>
+            <p>
+              Each product comes together to reflect your brand and stand out
+              among your competitors.
+            </p>
+          </div>
+        </div>
       </div>
       <div className="uk-width-1-1@s uk-padding-large uk-width-1-2@m uk-padding-large padding-fix">
-        <div className="main-content">
+        <div
+          className="main-content"
+          data-uk-parallax="y: 175,0; easing: -1; media: @m;"
+        >
           <h3>Our Services</h3>
           <h2>Branding, Websites, Apps, Oh My!</h2>
-          <div className="inner-content">
+          <div
+            className="inner-content"
+            data-uk-parallax="y: 185,0; easing: -1; media: @m;"
+          >
             <div className="left-border"></div>
             <div className="sub-headline">Plans • Monthly & Yearly</div>
             <p>
@@ -34,6 +59,7 @@ const OurServices: React.SFC<OurServicesProps> = () => {
           </div>
         </div>
         <div
+          data-uk-parallax="y: 325,0; easing: -1; media: @m;"
           className="uk-grid-small uk-child-width-1-2@s services"
           uk-grid="true"
         >
@@ -94,9 +120,22 @@ const OurServices: React.SFC<OurServicesProps> = () => {
       </div>
       <style jsx>
         {`
+          .services .uk-card {
+            border: 1px solid #fff;
+            transition: 0.3s ease-in-out;
+            border-radius: 22px;
+          }
+          .services .uk-card:hover {
+            border: 1px solid #03c3da;
+          }
           .uk-grid {
             margin-left: 0;
             margin-top: 0;
+          }
+          .container {
+            background-color: #fff;
+            margin-top: 0;
+            padding: 6rem 0;
           }
           h2 {
             font-size: 40px;
@@ -123,7 +162,27 @@ const OurServices: React.SFC<OurServicesProps> = () => {
           }
           .image-container {
             position: relative;
-            height: 1030px;
+            max-width: 582px;
+            width: 100%;
+            height: 475px;
+            border-radius: 22px;
+          }
+          .image-container h4 {
+            margin: 12px 0 0 0;
+          }
+          .image-container p {
+            margin-top: 10px;
+          }
+          .image-container img.background-image {
+            border-radius: 22px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+          }
+          .image-container .card-detail {
+            position: absolute;
+            max-width: 240px;
+            left: -30px;
+            bottom: -30px;
+            border-radius: 22px;
           }
           .main-content {
             max-width: 450px;
@@ -168,6 +227,17 @@ const OurServices: React.SFC<OurServicesProps> = () => {
           @media only screen and (max-width: 960px) {
             .image-container {
               height: 300px;
+            }
+          }
+          @media only screen and (max-width: 640px) {
+            .container {
+              padding 1rem 0;
+            }
+            .image-container .card-detail {
+              left: -30px;
+              bottom: -30px;
+              margin-left: 0.5rem;
+              border-radius: 22px;
             }
           }
         `}

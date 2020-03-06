@@ -1,14 +1,18 @@
 import React from 'react';
 
-export interface WhoWeAreProps { }
+export interface WhoWeAreProps {}
 
 const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
   return (
-    <div className="uk-flex uk-flex-middle container" uk-grid="true">
+    <div
+      id="whoweare"
+      className="uk-flex uk-flex-middle container"
+      uk-grid="true"
+    >
       <div className="uk-flex uk-flex-right uk-width-1-1@s uk-width-1-2@m uk-padding-large">
         <div className="image-container">
           <img
-            uk-parallax="y: 100,0; easing: -2; media: @m;"
+            data-uk-parallax="y: 100,0; easing: -2; media: @m;"
             src="/whoweare__01.jpg"
             alt="my image"
             className="background-image"
@@ -21,20 +25,24 @@ const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
               objectFit: 'cover'
             }}
           />
-          <div uk-parallax="y: 150,0; easing: -2; media: @m;" className="uk-card uk-card-default uk-card-body card-detail uk-padding-small">
+          <div
+            data-uk-parallax="y: 150,0; easing: -2; media: @m;"
+            className="uk-card uk-card-default uk-card-body card-detail uk-padding-small"
+          >
             <img
               src="collab_think.png"
               title="branding_icon"
               style={{ width: 30 }}
             />
             <h4>Collaborative</h4>
-            <p>
-              Small or big ideas we're here for the long run.
-              </p>
+            <p>Small or big ideas we're here for the long run.</p>
           </div>
         </div>
       </div>
-      <div uk-parallax="y: 175,0; easing: -1; media: @m;" className="uk-width-1-1@s  uk-width-1-2@m uk-padding-large">
+      <div
+        data-uk-parallax="y: 175,0; easing: -1; media: @m;"
+        className="uk-width-1-1@s  uk-width-1-2@m uk-padding-large"
+      >
         <div className="main-content">
           <h3>Who We Are</h3>
           <h2>We Are Orijinators</h2>
@@ -48,7 +56,7 @@ const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
               with you, the entrepreneur, that not only help scale business
               month to month but year after year.
             </p>
-            <a href="" className="orijin-button">
+            <a data-uk-scroll href="#target" className="orijin-button">
               Work With Us?
               <div className="border"></div>
             </a>
@@ -59,11 +67,10 @@ const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
         {`
           .container {
             margin-top: 0;
-            padding: 6rem  0;
+            padding: 6rem 0;
           }
           .uk-grid {
             margin-left: 0 !important;
-            border-bottom: 1px solid #eee;
           }
           h2 {
             font-size: 40px;
@@ -90,11 +97,11 @@ const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
             margin: 12px 0 0 0;
           }
           .image-container p {
-            margin-top: 10px
+            margin-top: 10px;
           }
           .image-container img.background-image {
             border-radius: 22px;
-            box-shadow: 0 5px 15px rgba(0,0,0,.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
           }
           .image-container .card-detail {
             position: absolute;
@@ -158,9 +165,20 @@ const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
               height: 300px;
             }
           }
+          @media only screen and (max-width: 640px) {
+            .container {
+              padding: 1rem 0;
+            }
+            .image-container .card-detail {
+              left: -30px;
+              bottom: -30px;
+              margin-left: 0.5rem;
+              border-radius: 22px;
+            }
+          }
         `}
       </style>
-    </div >
+    </div>
   );
 };
 

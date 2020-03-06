@@ -1,44 +1,92 @@
 import React from 'react';
 
-export interface HeaderProps { }
+export interface HeaderProps {}
 
 const Header: React.SFC<HeaderProps> = () => {
   return (
     <div className="container">
-      <nav uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
-
-        <div className="hamburgerContainer uk-hidden@m">
-          <button className="uk-flex uk-flex-column uk-flex-middle" uk-toggle="target: #offcanvas-push" >
-            <div className="topBar" />
-            <div className="midBar" />
-            <div className="bottomBar" />
-          </button>
-        </div>
+      <div className="hamburgerContainer uk-hidden@s">
+        <button
+          className="uk-flex uk-flex-column uk-flex-middle"
+          uk-toggle="target: #offcanvas-push"
+        >
+          <div className="topBar" />
+          <div className="midBar" />
+          <div className="bottomBar" />
+        </button>
+      </div>
+      <nav>
         <div className="desktop-menu">
-          <ul className="uk-navbar-nav uk-visible@m">
-            <li className="uk-active"><a href="#">Welcome</a></li>
-            <li><a href="#">Who We Are</a></li>
-            <li><a href="#">Digital</a></li>
+          <ul className="uk-navbar-nav uk-flex-right uk-visible@m">
+            <li className="uk-active">
+              <a href="#welcome" data-uk-scroll>
+                Welcome
+              </a>
+            </li>
+            <li>
+              <a href="#whoweare" data-uk-scroll>
+                Who We Are
+              </a>
+            </li>
+            <li>
+              <a href="#digital" data-uk-scroll>
+                Digital
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
-      {/* <nav className="desktop-menu uk-visible@m" uk-navbar="true">
-        
-
-      </nav> */}
       <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
-        <div className="uk-offcanvas-bar">
+        <div className="uk-offcanvas-bar mobile-menu">
+          <span className="uk-offcanvas-close">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              data-svg="close"
+            >
+              <path
+                fill="none"
+                stroke="#fff"
+                strokeWidth="1.06"
+                d="M16,16 L4,4"
+              ></path>
+              <path
+                fill="none"
+                stroke="#fff"
+                strokeWidth="1.06"
+                d="M16,4 L4,16"
+              ></path>
+            </svg>
+          </span>
 
-          <button className="uk-offcanvas-close" type="button" uk-close="true"></button>
-
-          <h3>Orijinator</h3>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
+          <ul className="uk-nav">
+            <li className="uk-active">
+              <a href="#welcome" data-uk-scroll>
+                Welcome
+              </a>
+            </li>
+            <li>
+              <a href="#whoweare" data-uk-scroll>
+                Who We Are
+              </a>
+            </li>
+            <li>
+              <a href="#digital" data-uk-scroll>
+                Digital
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <style jsx>
         {`
+          .close-tray {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 00;
+          }
           .container {
             z-index: 9999;
             position: absolute;
@@ -48,6 +96,8 @@ const Header: React.SFC<HeaderProps> = () => {
             padding: 0 0;
           }
           .hamburgerContainer {
+            position: relative;
+            z-index: 9999;
             width: 22px;
             padding: 1rem;
             transform: rotate(-45deg);
@@ -84,6 +134,16 @@ const Header: React.SFC<HeaderProps> = () => {
             border: none;
             background-color: transparent;
             padding: 0;
+            outline-color: #03c3da;
+          }
+          .mobile-menu {
+            border-radius: 0 20px 20px 0;
+          }
+          .mobile-menu li a {
+            font-family: 'Montserrat', sans-serif;
+          }
+          .mobile-menu .uk-nav {
+            margin-top: 2rem;
           }
           @media only screen and (max-width: 640px) {
             .desktopMenu {
