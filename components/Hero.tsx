@@ -31,10 +31,9 @@ const Hero: React.SFC<HeroProps> = () => {
               Empowering entrepreneurship through technology
             </div>
             <p>
-              From websites to progressive apps to consistent brand execution
-              Orijinator is a new type of agency that aims to help you compete
-              and drive your brand using the hottest technology at affordable
-              cost.
+              Orijinator is a new type of agency that combines websites, mobile
+              apps, and consistent brand execution to help you compete and drive
+              your brand using the latest technology at an affordable cost.
             </p>
             <p className="subtagline">
               UI • UX • Progressive &amp; Mobile Applications • Websites

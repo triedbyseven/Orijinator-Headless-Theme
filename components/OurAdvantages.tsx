@@ -20,10 +20,10 @@ const OurAdvantages: React.SFC<OurAdvantagesProps> = () => {
             where to start. <br />
             <br />
             We understand the journey ahead to building your business and we can
-            help you every step through that process. Through our unique plans
-            and consultation we aim to drive your business to success. Larger
-            established companies should not only benefit from technology, it’s
-            2020 and we are changing this now.
+            help you in the process. Through our unique plans and consulting we
+            aim to drive your business to success. Larger established companies
+            should not benefit from technology only, it’s 2020 and we are
+            changing this now.
           </p>
           <img
             src="ouradvantages_01.jpg"

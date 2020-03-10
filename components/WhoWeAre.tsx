@@ -50,11 +50,10 @@ const WhoWeAre: React.SFC<WhoWeAreProps> = () => {
             <div className="left-border"></div>
             <div className="sub-headline">Pushing the entrepreneur forward</div>
             <p>
-              Here at Orijinators we acknowledge the hard working, trend
-              setting, taking names while pushing their vision foward
-              entrepreneur. We build products and more importantly relationships
-              with you, the entrepreneur, that not only help scale business
-              month to month but year after year.
+              We are Orijinators. Just like you. A group of freelancers,
+              entrepreneurs, (dreamers) believers, go-getters, and idea
+              generators. That put together their skill and creativity to help
+              others push their ideas forward in the age of tech.
             </p>
             <a data-uk-scroll href="#target" className="orijin-button">
               Work With Us?
